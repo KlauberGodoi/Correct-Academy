@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button fill="clear" color="dark" title=''></ion-back-button>
+    </ion-buttons>
+    <ion-title color="success">Cadastrar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title color="success">Informações de Cadastro</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Nome Completo</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Senha</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Confirme sua Senha</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Telefone</ion-label>
+        <ion-input type="tel"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title color="success">Informações Pessoais</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Peso</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Altura</ion-label>
+        <ion-input type="tel"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Idade</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-button size="full" color="light" (click)="cadastro()">Confirmar Cadastro</ion-button>
+</ion-content>
+<ion-progress-bar value="0.5"></ion-progress-bar>

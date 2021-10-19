@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/cadastro"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Bem Vindo ao CorrectAcademy!</ion-card-subtitle>
+      <ion-card-title>NOS AJUDE A PROGRAMAR SEUS TREINOS RESPONDENDO O QUESTIONARIO ABAIXO</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="ion-text-justify">
+      Você pode nivelar e escolher conforme prefere, fazendo isso o APP
+      entregará melhores treinos a você. Depois de concluido você pode fazer alterações.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-list>
+      <ion-list-header>
+        <ion-label class="ion-text-uppercase">Selecione o nivel do treinos que iremos te recomendar</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Perna</ion-label>
+        <ion-select cancelText="Cancelar" okText="Confirmar" placeholder="Selecione">
+          <ion-select-option value="per1">Iniciante</ion-select-option>
+          <ion-select-option value="per2">Moderado</ion-select-option>
+          <ion-select-option value="per3">Avançado</ion-select-option>
+          <ion-select-option value="per0">Nenhum</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Costas</ion-label>
+        <ion-select cancelText="Cancelar" okText="Confirmar" placeholder="Selecione">
+          <ion-select-option value="cos1">Iniciante</ion-select-option>
+          <ion-select-option value="cos2">Moderado</ion-select-option>
+          <ion-select-option value="cos3">Avançado</ion-select-option>
+          <ion-select-option value="cos0">Nenhum</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Peito</ion-label>
+        <ion-select cancelText="Cancelar" okText="Confirmar" placeholder="Selecione">
+          <ion-select-option value="pei1">Iniciante</ion-select-option>
+          <ion-select-option value="pei2">Moderado</ion-select-option>
+          <ion-select-option value="pei3">Avançado</ion-select-option>
+          <ion-select-option value="pei0">Nenhum</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Aerobico</ion-label>
+        <ion-select cancelText="Cancelar" okText="Confirmar" placeholder="Selecione">
+          <ion-select-option value="aer1">Iniciante</ion-select-option>
+          <ion-select-option value="aer2">Moderado</ion-select-option>
+          <ion-select-option value="aer3">Avançado</ion-select-option>
+          <ion-select-option value="aer0">Nenhum</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-card>
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Altura: </ion-label>
+        <ion-input min="40" max="240" type="number"></ion-input>
+        <ion-note slot="end">cm</ion-note>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-card>
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Peso: </ion-label>
+        <ion-input min="40" max="160" type="number"></ion-input>
+        <ion-note slot="end">Kilos</ion-note>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>
+
+<ion-button color="success" (click)="menssageConfirm()" href="/home">Registrar</ion-button>
+<ion-progress-bar value="0.98"></ion-progress-bar>
