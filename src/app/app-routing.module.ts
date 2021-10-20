@@ -38,7 +38,23 @@ const routes: Routes = [
   {
     path: 'midia',
     loadChildren: () => import('./pages/midia/midia.module').then( m => m.MidiaPageModule)
+  },  {
+    path: 'perna',
+    loadChildren: () => import('./pages/perna/perna.module').then( m => m.PernaPageModule)
+  },
+  {
+    path: 'peito',
+    loadChildren: () => import('./pages/peito/peito.module').then( m => m.PeitoPageModule)
+  },
+  {
+    path: 'aerobico',
+    loadChildren: () => import('./pages/aerobico/aerobico.module').then( m => m.AerobicoPageModule)
+  },
+  {
+    path: 'costas',
+    loadChildren: () => import('./pages/costas/costas.module').then( m => m.CostasPageModule)
   }
+
 ];
 
 @NgModule({
