@@ -12,7 +12,7 @@ slideOpts = {
     loop: true,
     spaceBetween: 10,
     initialSlide: 0,
-    speed: 1000,
+    speed: 2000,
     autoplay: true,
   };
   constructor() { }
