@@ -25,9 +25,10 @@ ion-slides{
 .swiper-slide{
   transition: 400ms all ease-in-out;
 }
-ion-title{
-  color: aliceblue;
-  font-size: 25px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+
+ion-card-title{
+  color: var(--ion-color-primary-contrast);
+}
+p{
+  padding: 8px;
 }
