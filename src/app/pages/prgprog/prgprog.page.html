@@ -1,15 +1,7 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/cadastro"></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
   <ion-card>
     <ion-card-header>
-      <ion-card-subtitle>Bem Vindo ao CorrectAcademy!</ion-card-subtitle>
+      <ion-card-subtitle>Bem Vindo ao <strong>BOOST!</strong></ion-card-subtitle>
       <ion-card-title>NOS AJUDE A PROGRAMAR SEUS TREINOS RESPONDENDO O QUESTIONARIO ABAIXO</ion-card-title>
     </ion-card-header>
 
@@ -64,6 +56,5 @@
     </ion-list>
   </ion-card>
 </ion-content>
-
-<ion-button color="success" (click)="menssageConfirm()" href="/home">Registrar</ion-button>
-<ion-progress-bar value="0.98"></ion-progress-bar>
+<ion-button color="primary" fill="clear" href="/home">Depois</ion-button>
+<ion-button color="primary" (click)="menssageConfirm()" href="/home">Registrar</ion-button>
