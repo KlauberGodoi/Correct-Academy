@@ -1,6 +1,5 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',

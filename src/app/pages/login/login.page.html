@@ -1,16 +1,11 @@
 <ion-content>
   <div class="flex-center">
     <ion-card>
-    <ion-card-header>
-      <ion-card>
-      <ion-avatar slot="center">
-        <img src="./assets/avatar/usuario.png">
-      </ion-avatar>
-    </ion-card>
-      <ion-card-title class="ion-text-center">Login</ion-card-title>
-    </ion-card-header>
-
+   
     <ion-card-content>
+      <div class="">
+        <ion-img src="./assets/avatar/usuario.png"></ion-img>
+      </div>
       <ion-item>
         <ion-label position="floating">Insira seu Email</ion-label>
         <ion-input type="email"></ion-input>
@@ -19,9 +14,9 @@
         <ion-label position="floating">Insira sua Senha</ion-label>
         <ion-input type="Password"></ion-input>
       </ion-item>
-      <ion-button color="Dark" fill="clear" size="full">Esqueceu sua senha ou email?</ion-button>
       <ion-button  color="success" expand="block" (click)="login()">Logar</ion-button>
-      <ion-button color="success" fill="clear" expand="block"(click)="cadastro()">Cadastrar</ion-button>
+      <ion-button fill="clear" color="success" expand="block"(click)="cadastro()">Cadastrar</ion-button>
     </ion-card-content>
   </ion-card></div>
 </ion-content>
+
