@@ -15,16 +15,16 @@ export class CadastroPage implements OnInit {
 
   constructor(
     private router: Router,
-  
+    /*
     private loadingCtrl: LoadingController,
     private tostCtrl: ToastController,
     private authService: AuthService
-    
+    */
   ) { }
 
   ngOnInit() {
   }
-
+/*
   async register() {
     await this.presentLoading();
 
@@ -38,13 +38,13 @@ export class CadastroPage implements OnInit {
   }
 
   async presentLoading() {
-    this.loading = await this.loadingCtrl.create({ message: 'Por Favor aguarde..' });
+    this.loading = await this.loadingCtrl.create({ message: 'Por Favor aguarde' });
     return this.loading.present();
   }
-  /*
+  */
   register(){
     console.log(this.userRegister)//retirar depois
-  }*/
+  }
   
   pageInitial() {
     this.router.navigate(['login']);
