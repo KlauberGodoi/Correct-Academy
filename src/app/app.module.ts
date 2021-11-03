@@ -7,11 +7,11 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-//Cloud
+//fire
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-import { firebaseConfig } from './pages/credential';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,8 +20,8 @@ import { firebaseConfig } from './pages/credential';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    //Cloud
-    AngularFireModule.initializeApp(firebaseConfig),
+    //fire
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule
   ],
