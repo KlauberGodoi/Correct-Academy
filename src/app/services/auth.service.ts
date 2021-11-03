@@ -14,7 +14,7 @@ export class AuthService {
 
   }
 
-  entrar(user: User){
+  register(user: User){
     return this.afa.createUserWithEmailAndPassword(user.email, user.password);
   }
 
