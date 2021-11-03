@@ -17,6 +17,7 @@ export class LoginPage implements OnInit {
   entrar(){
     console.log(this.userLogin)
   }
+  
   cadastro(){
     this.router.navigate(['cadastro']);
   }
