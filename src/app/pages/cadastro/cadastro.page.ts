@@ -1,7 +1,6 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { User } from 'src/app/interfaces/user';
 
 @Component({
   selector: 'app-cadastro',
@@ -11,15 +10,17 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 export class CadastroPage implements OnInit {
 
   constructor(private router: Router) { }
-  login(){
-    this.router.navigate(['login']);
-  }
-
-  sigin(){
-    this.router.navigate(['home']);
-  }
+  public userRegister: User = {};
 
   ngOnInit() {
+  }
+
+  entrar(){
+    console.log(this.userRegister)
+  }
+
+  pageInitial(){
+    this.router.navigate(['login']);
   }
 
 }

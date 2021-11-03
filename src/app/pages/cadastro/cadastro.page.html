@@ -16,10 +16,6 @@
         <ion-label position="floating">Senha</ion-label>
         <ion-input type="password"></ion-input>
       </ion-item>
-      <ion-item>
-        <ion-label position="floating">Confirme sua Senha</ion-label>
-        <ion-input type="password"></ion-input>
-      </ion-item>
     </ion-card-content>
   </ion-card>
   <ion-card>
@@ -37,14 +33,7 @@
         <ion-note slot="end">kg</ion-note>
       </ion-item>
     </ion-list>
-    <ion-list>
-      <ion-item>
-        <ion-label position="stacked">Idade: </ion-label>
-        <ion-input min="10" max="120" type="number"></ion-input>
-        <ion-note slot="end">anos</ion-note>
-      </ion-item>
-    </ion-list>
   </ion-card>
 </ion-content>
-<ion-button expand="block" color="primary" fill="clear"  (click)="login()">Já possui conta?</ion-button>
-<ion-button expand="block" color="primary" (click)="sigin()">Confirmar Cadastro</ion-button>
+<ion-button expand="block" color="primary" fill="clear"  (click)="pageInitial()">Já possui conta?</ion-button>
+<ion-button expand="block" color="primary" (click)="entrar()">Confirmar Cadastro</ion-button>
