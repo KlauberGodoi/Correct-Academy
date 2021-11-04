@@ -42,13 +42,13 @@ export class LoginPage implements OnInit {
   }
 
   async presentToast(message: string) {
-    const toast = await this.tostCtrl.create({ message, duration: 6000 });
+    const toast = await this.tostCtrl.create({ message, duration: 5000 });
     toast.present();
   }
   // fim login
 
-  cadastro() {
-    this.router.navigate(['cadastrar']);
+  cadastrar() {
+    this.router.navigate(['cadastro']);
   }
   perna() {
     this.router.navigate(['perna']);

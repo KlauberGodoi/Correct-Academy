@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from './guards/auth.guard';
-import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [
   {path: '', redirectTo: 'loader', pathMatch: 'full'},
 
   {path: 'loader',loadChildren: () => import('./pages/loader/loader.module' ).then( m => m.LoaderPageModule) },
-  {path: 'login',loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule), canActivate: [LoginGuard]},//ñ funciona
+  {path: 'login',loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule), /*canActivate: [LoginGuard]*/},//ñ funciona
   {path: 'cadastro',loadChildren: () => import('./pages/cadastro/cadastro.module').then( m => m.CadastroPageModule)},
-  {path: 'home',loadChildren: () => import('./Pages/home/home.module').then( m => m.HomePageModule), canActivate:[AuthGuard]},//ñ funciona
+{path: 'home',loadChildren: () => import('./Pages/home/home.module').then( m => m.HomePageModule), /*canActivate:[AuthGuard]*/},//ñ funciona
   {path: 'prgprog',loadChildren: () => import('./pages/prgprog/prgprog.module').then( m => m.PrgprogPageModule)},
   {path: 'perfil',loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)},
   {path: 'comment',loadChildren: () => import('./pages/comment/comment.module').then( m => m.CommentPageModule)},
