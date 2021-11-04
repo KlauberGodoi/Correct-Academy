@@ -10,19 +10,19 @@ import * as firebase from 'firebase/app';
 export class AuthService {
   constructor(private afa: AngularFireAuth) { }
 
-  login(user: User){
-
+  login(user: User) {
+    return this.afa.signInWithEmailAndPassword(user.email, user.password);
   }
 
-  register(user: User){
+  register(user: User) {
     return this.afa.createUserWithEmailAndPassword(user.email, user.password);
   }
 
-  logout(){
-    
+  logout() {
+
   }
 
-  getAuth(){
-
+  getAuth() {
+    return this.afa;
   }
 }

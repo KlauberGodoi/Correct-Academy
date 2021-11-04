@@ -15,35 +15,35 @@ export class CadastroPage implements OnInit {
 
   constructor(
     private router: Router,
-    /*
     private loadingCtrl: LoadingController,
     private tostCtrl: ToastController,
     private authService: AuthService
-    */
+    
   ) { }
 
   ngOnInit() {
   }
-/*
+  // inicio registro - cadastro
   async register() {
     await this.presentLoading();
-
+    // try
     try {
       await this.authService.register(this.userRegister);
     } catch (error) {
       console.error(error);
+      this.presentToast(error.message);
     } finally {
       this.loading.dismiss();
     }
   }
-
   async presentLoading() {
-    this.loading = await this.loadingCtrl.create({ message: 'Por Favor aguarde' });
+    this.loading = await this.loadingCtrl.create({ message: 'Por Favor aguarde...' });
     return this.loading.present();
   }
-  */
-  register(){
-    console.log(this.userRegister)//retirar depois
+ 
+  async presentToast(message: string) {
+    const toast = await this.tostCtrl.create({ message, duration: 6000 });
+    toast.present();
   }
   
   pageInitial() {

@@ -1,6 +1,8 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/interfaces/user';
+import { LoadingController, ToastController } from '@ionic/angular';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -9,17 +11,46 @@ import { User } from 'src/app/interfaces/user';
 })
 export class LoginPage implements OnInit {
   public userLogin: User = {};
+  private loading: any;
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    //implementado
+    private loadingCtrl: LoadingController,
+    private tostCtrl: ToastController,
+    private authService: AuthService
+  ) { }
 
   ngOnInit() {
   }
-  entrar(){
-    console.log(this.userLogin)
+  // inicio login
+  async login() {
+    await this.presentLoading();
+    //try
+    try {
+      await this.authService.login(this.userLogin);
+    } catch (error) {
+      console.error(error);
+      this.presentToast(error.message);
+    } finally {
+      this.loading.dismiss();
+    }
   }
-  
-  cadastro(){
-    this.router.navigate(['cadastro']);
+  async presentLoading() {
+    this.loading = await this.loadingCtrl.create({ message: 'Por Favor aguarde...' });
+    return this.loading.present();
   }
 
+  async presentToast(message: string) {
+    const toast = await this.tostCtrl.create({ message, duration: 6000 });
+    toast.present();
+  }
+  // fim login
+
+  cadastro() {
+    this.router.navigate(['cadastrar']);
+  }
+  perna() {
+    this.router.navigate(['perna']);
+  }
 }
