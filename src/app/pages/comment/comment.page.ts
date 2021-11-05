@@ -9,7 +9,7 @@ export class CommentPage implements OnInit {
 
   constructor() { }
   openLink1(){
-    window.open('https://www.linkedin.com/in/eduardo-lazaro-8857141bb/');
+    window.open('https://www.linkedin.com/in/eduardo-lazaro666/');
   }
   openLink2(){
     window.open('');
