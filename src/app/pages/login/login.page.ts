@@ -29,6 +29,7 @@ export class LoginPage implements OnInit {
     //try
     try {
       await this.authService.login(this.userLogin);
+      this.router.navigate(['home']);
     } catch (error) {
       console.error(error);
       this.presentToast(error.message);

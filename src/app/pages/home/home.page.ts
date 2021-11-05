@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-home',
@@ -15,9 +16,16 @@ slideOpts = {
     speed: 2000,
     autoplay: true,
   };
-  constructor() { }
+  constructor(
+    private afa: AngularFireAuth
+  ) { }
 
   ngOnInit() {
   }
 
+  logout(){
+    this.afa.signOut().then((val)=>{
+      //alert(JSON.stringify(val));
+    })
+  }
 }

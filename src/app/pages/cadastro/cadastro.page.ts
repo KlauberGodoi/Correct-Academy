@@ -29,6 +29,7 @@ export class CadastroPage implements OnInit {
     // try
     try {
       await this.authService.register(this.userRegister);
+      this.router.navigate(['home']);
     } catch (error) {
       console.error(error);
       this.presentToast(error.message);
