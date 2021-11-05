@@ -21,7 +21,7 @@ export class CommentPage implements OnInit {
     window.open('https://github.com/Eduardo-Lazaro');
   }
   openGit2(){
-    window.open('');
+    window.open('https://github.com/StarPlaatinum');
   }
   openGit3(){
     window.open('');
