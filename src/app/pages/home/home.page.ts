@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Subscription } from 'rxjs';
+import { Info } from 'src/app/interfaces/info';
+import { InfoService } from 'src/app/services/info.service';
 
 @Component({
   selector: 'app-home',
@@ -7,8 +10,11 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+  private infos = new Array<Info>();
+  private infosSubsccription: Subscription;
+
 slideOpts = {
-    slidesPerview: 1.5,
+    slidesPerview: 1,
     centerSlides: true,
     loop: true,
     spaceBetween: 10,
@@ -17,15 +23,22 @@ slideOpts = {
     autoplay: true,
   };
   constructor(
-    private afa: AngularFireAuth
-  ) { }
+    private afa: AngularFireAuth,
+    private infosServices: InfoService) {
+    this.infosSubsccription = this.infosServices.getInfos().subscribe(data => {
+      this.infos = data;
+    })
+   }
 
   ngOnInit() {
   }
 
-  logout(){
-    this.afa.signOut().then((val)=>{
-      //alert(JSON.stringify(val));
-    })
+  ngOnDestroy() {
+    this.infosSubsccription.unsubscribe();
   }
+
+  logout(){
+    this.afa.signOut();
+  }
+  
 }
